@@ -25,18 +25,22 @@
          <button id="startBtn">Start</button>
      </div>
      <div class="quiz">
-         <div id="question" class="hide">
-             <h2 id="qTitle"></h2>
-             <div id="choices"></div>
-             
+         <div id="question" class="card" hidden>
+            <h2 id="qTitle"></h2>
+             <div id="choices">
+                <button id="choice0" class="button choice-button"></button>
+                <button id="choice1" class="button choice-button"></button>
+                <button id="choice2" class="button choice-button"></button>
+                <button id="choice3" class="button choice-button"></button>
+             </div>
          </div>
-         <div id="endScreen" class="hide">
+         <div id="endScreen" class="card" hidden>
              <div>
                  <span id="highScore"></span>
              </div>
-             <!-- <p>Enter Initials <input type="text"  id="initials" max="3">
+             <p>Enter Initials <input type="text"  id="initials" max="3">
                  <button id="endBtn"></button>
-             </p> -->
+             </p>
          </div>
          <script src="script.js"></script>
      </div>
