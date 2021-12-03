@@ -13,37 +13,41 @@
         <div>
             <a href="highscore.html">View highscores</a>
         </div>
-        <div>Time: <span id="Timer">50</span></div>
+        <div>Time: <span id="timer"></span></div>
     </header> 
     
     
     
     <main>
-     <div id="start" class="card">
-         <h1>Coding Quiz Challenge</h1>
-         <p>Information</p>
-         <button id="startBtn">Start</button>
-     </div>
-     <div class="quiz">
-         <div id="question" class="card" hidden>
-            <h2 id="qTitle"></h2>
-             <div id="choices">
-                <button id="choice0" class="button choice-button"></button>
-                <button id="choice1" class="button choice-button"></button>
-                <button id="choice2" class="button choice-button"></button>
-                <button id="choice3" class="button choice-button"></button>
-             </div>
-         </div>
-         <div id="endScreen" class="card" hidden>
-             <div>
-                 <span id="highScore"></span>
-             </div>
-             <p>Enter Initials <input type="text"  id="initials" max="3">
-                 <button id="endBtn"></button>
-             </p>
-         </div>
-         <script src="script.js"></script>
-     </div>
+        <div id="start" class="card">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Information</p>
+            <button id="startBtn">Start</button>
+        </div>
+        <div class="quiz">
+            <div id="question" class="card" hidden>
+                <h2 id="qTitle"></h2>
+                <div id="choices">
+                    <button id="choice0" class="button choice-button"></button>
+                    <button id="choice1" class="button choice-button"></button>
+                    <button id="choice2" class="button choice-button"></button>
+                    <button id="choice3" class="button choice-button"></button>
+                </div>
+            </div>
+            <div id="result-banner" hidden>
+            <hr>   
+            <h3 id="input-result"></h3>
+            </div>
+            <div id="endScreen" class="card" hidden>
+                <div>
+                    <span id="highScore"></span>
+                </div>
+                <p>Enter Initials <input type="text"  id="initials" max="3">
+                    <button id="endBtn"></button>
+                </p>
+            </div>
+            <script src="script.js"></script>
+        </div>
     </main>  
 </body>
 </html>

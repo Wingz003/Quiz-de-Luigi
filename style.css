@@ -1,5 +1,6 @@
-
-
+body {
+    background: gray;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -22,6 +23,8 @@ main {
     margin-top: 60px;
     padding: 10%;
     height: 100%;
+    
+    
     
     
     
