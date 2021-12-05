@@ -1,28 +1,28 @@
 const questions = [
     {
+        question: "The fastest-running terrestrial animal is:",
+        choices: ["1. Lion", "2. Man", "3. Jaguar", "4. Cheetah"],
+        correct: "4. Cheetah"
+    },
+    {
+        question: "What is the lightest element in the periodic table?",
+        choices: ["1. Helium", "2. Hydrogen", "3. Air", "4. Neutrons"],
+        correct: "2. Hydrogen"
+    },
+    {
+        question: "Which street fighter character is the meatiest?",
+        choices: ["1. Ehonda", "2. Zangief", "3. Balrog", "4. Bison"],
+        correct: "2. Zangief"
+    },
+    {
         question: "What is the best gaming console?",
-        choices: ["Xbox", "Playstation", "PC", "Switch"],
-        correct: "PC"
+        choices: ["1. Xbox", "2. Playstation", "3. PC-Master Race", "4. Switch"],
+        correct: "3. PC-Master Race"
     },
     {
-        question: "What is the best gaming console2?",
-        choices: ["Xbox1", "Playstation1", "PC1", "Switch1"],
-        correct: "PC1"
-    },
-    {
-        question: "What is the best gaming console3?",
-        choices: ["Xbox2", "Playstation2", "PC2", "Switch2"],
-        correct: "PC2"
-    },
-    {
-        question: "What is the best gaming console4?",
-        choices: ["Xbox3", "Playstation3", "PC3", "Switch3"],
-        correct: "PC3"
-    },
-    {
-        question: "What is the best gaming console5?",
-        choices: ["Xbox4", "Playstation4", "PC4", "Switch4"],
-        correct: "PC4"
+        question: "Which planet has a moon almost as big as the planet itself?",
+        choices: ["1. Jupiter", "2. Mercury", "3. Pluto", "4. Saturn"],
+        correct: "3. Pluto"
     },
 ];
 
@@ -121,7 +121,7 @@ function nextQuestion(event) {
 
         } else {
             resultBanner.removeAttribute("hidden");
-            inputResult.textContent = "Git Gud!";
+            inputResult.textContent = "Incorrect!";
             setTimeout(() => resultBanner.setAttribute("hidden", true), 500);
             count -= 10;
         }

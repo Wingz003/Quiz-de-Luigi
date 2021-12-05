@@ -13,7 +13,16 @@ main {
     
     
 }
- 
+ .start-button {
+     width: 150px;
+     height: 50px;
+     font-size: 20px;
+     font-weight: bold;
+     color: white;
+     background: #3E124F;
+     border-radius: 10px;
+
+ }
 .card {
     display: flex;
     border: none;
@@ -24,9 +33,21 @@ main {
     
     
 }
-.question-style {
+.card > h1 {
+    padding-bottom: 20px;
     font-size: 50px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.card > p {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.question-style {
+    font-size: 35px;
+    text-align: center;
+
 
 }
 .choice-container {
@@ -36,12 +57,48 @@ main {
     margin-top: 10px;
 }
 .choice-button {
-    border-radius: 15px;
+    text-align: left;
+    border-radius: 8px;
     font-size: larger;
     font-weight: bold;
-    background: purple;
+    background: #3E124F;
     color: white;
-    margin: 8px;
-    width: 250px;
+    margin: 5px;
+    width: 200px;
     height: 50px;
+}
+
+.Submit-button {
+    background: #3E124F;
+    color: white;
+    border-radius: 5px;
+}
+.score-card {
+    width: 60%;
+    margin: auto;
+    align-items: flex-start;
+    
+    
+}
+.back-button {
+    margin-top: 25px;
+    border-radius: 5px;
+    background: #3E124F;
+    color: white;
+    font-weight: bold;
+}
+.clear-button {
+    border-radius: 5px;
+    background: #3E124F;
+    color: white;
+    font-weight: bold;
+}
+.saved-scores {
+    font-size: 20px;
+    font-weight: bold;
+    background: #9370DB;
+    padding-right: 150px;
+    border-radius: 5px;
+    
+    
 }
