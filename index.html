@@ -13,11 +13,8 @@
         <div>
             <a href="highscore.html">View highscores</a>
         </div>
-        <div>Time: <span id="timer"></span></div>
+        <div><span id="timer"></span></div>
     </header> 
-    
-    
-    
     <main>
         <div id="start" class="card">
             <h1>Coding Quiz Challenge</h1>
@@ -25,9 +22,9 @@
             <button id="startBtn">Start</button>
         </div>
         <div class="quiz">
-            <div id="question" class="card" hidden>
-                <h2 id="qTitle"></h2>
-                <div id="choices">
+            <div id="question" class="card quiz-card" hidden>
+                <h2 id="qTitle" class="question-style"></h2>
+                <div id="choices" class="choice-container">
                     <button id="choice0" class="button choice-button"></button>
                     <button id="choice1" class="button choice-button"></button>
                     <button id="choice2" class="button choice-button"></button>
@@ -42,8 +39,10 @@
                 <div>
                     <span id="highScore"></span>
                 </div>
+                <h2>All done!</h2>
+                <p id="finalScore"></p>
                 <p>Enter Initials <input type="text"  id="initials" max="3">
-                    <button id="endBtn"></button>
+                    <button id="endBtn" class="button">Submit</button>
                 </p>
             </div>
             <script src="script.js"></script>

@@ -1,6 +1,4 @@
-body {
-    background: gray;
-}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -18,20 +16,32 @@ main {
  
 .card {
     display: flex;
-    justify-content: center;
+    border: none;
     align-items: center;
     margin-top: 60px;
     padding: 10%;
     height: 100%;
     
     
-    
-    
-    
+}
+.question-style {
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.choice-container {
+    display: flex;
+    flex-flow: column;
+    align-self: flex-start;
+    margin-top: 10px;
 }
 .choice-button {
-    justify-content: flex-end;
-    margin: 5px;
-    width: 120px;
+    border-radius: 15px;
+    font-size: larger;
+    font-weight: bold;
+    background: purple;
+    color: white;
+    margin: 8px;
+    width: 250px;
     height: 50px;
 }

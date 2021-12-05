@@ -28,28 +28,37 @@ const questions = [
 
 let start = document.getElementById("start");
 let startBtn = document.getElementById("startBtn");
-let quiz = document.getElementById("quiz"); 
 let question = document.getElementById("question");
 let choiceList = document.getElementById("choices");
 let timer = document.getElementById("timer");
 let choiceBtn = document.querySelector(".choice-button");
 let resultBanner = document.getElementById("result-banner");
 let inputResult = document.getElementById("input-result");
-let count;
+let endScreen = document.getElementById("endScreen");
+let endBtn = document.getElementById("endBtn");
+let initials = document.getElementById("initials");
+let finalScore = document.getElementById("finalScore");
 let currentQuestion;
-let intervalID;
+let count = 75;
+let gameInProgress = false;
+
+if(!localStorage.getItem("highScores")) {
+    localStorage.setItem("highScores", JSON.stringify([]));
+}
 
 function startCountdown() {
+    count = 75;
+    gameInProgress = true;
     
-   
-   
     
     const interval = setInterval(() => {
+        if (gameInProgress){
+            count--;
+        };
+
+        timer.textContent = "Time: " + count;
         
-        timer.textContent = count;
-        count--;
         
-        console.log(count);
         if (count < 0) {
             clearInterval(interval);
             console.log("ay");
@@ -62,12 +71,17 @@ function startCountdown() {
 
 
 
-startBtn.addEventListener('click', startQuiz);
 choiceList.addEventListener('click', nextQuestion);
+startBtn.addEventListener('click', startQuiz);
+endBtn.addEventListener('click', endQuiz);
 
-
+function endQuiz() {
+    let highScores = JSON.parse(localStorage.getItem("highScores"));
+    highScores.push(initials.value + " - " + count);
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+}
 function startQuiz() {
-
+    
     currentQuestion = 0;
     start.setAttribute("hidden" , true);
     question.removeAttribute("hidden");
@@ -118,8 +132,9 @@ function nextQuestion(event) {
                         resultBanner.removeAttribute("hidden");
                         inputResult.textContent = "Git Gud!";
                         setTimeout( () => resultBanner.setAttribute("hidden", true), 500);
-                        count = count - 10;
-                        timer.textContent = count;
+                        count -= 10;
+               
+                        
 
                         
                     }
@@ -127,6 +142,12 @@ function nextQuestion(event) {
 
                
                currentQuestion++;
+               if (currentQuestion === questions.length) {
+                   gameInProgress = false;
+                   finalScore.innerText = "Your final score is: " + count;
+                   question.setAttribute("hidden", true);
+                   endScreen.removeAttribute("hidden");
+               }
                renderQuestion();
         }}
  
